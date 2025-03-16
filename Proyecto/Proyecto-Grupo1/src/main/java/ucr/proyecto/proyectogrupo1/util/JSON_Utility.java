@@ -76,15 +76,15 @@ public class JSON_Utility {
         }
         //Si no existe ningun archivo, los creamos en cualquiera de las carpetas
         if (pathExist == false){
-            ABOSLUTE_PATH = "Archivos\\Carpeta2";
+            //ABOSLUTE_PATH = "Archivos\\Carpeta2";
+            ABOSLUTE_PATH = "C:\\AlgortimosEstructurasDatos\\Proyecto_Grupo1_LaberintoDeLibros\\Proyecto-Grupo1\\Archivos\\Carpeta2";
         }
     }
 
     //Consigo la ruta absoluta de los archivos, donde el getPath() la distribuye a todos
     public void createPathFather(){
-        File fileFather = new File("Archivos");
-
-        //fileFather.listFiles();
+        //File fileFather = new File("Archivos");
+        File fileFather = new File("C:\\AlgortimosEstructurasDatos\\Proyecto_Grupo1_LaberintoDeLibros\\Proyecto-Grupo1\\Archivos");
 
         if (fileFather.exists() && fileFather.isDirectory()) {
             File[] subcarpetas = fileFather.listFiles(File::isDirectory);
@@ -94,9 +94,9 @@ public class JSON_Utility {
                 directoryList = subcarpetas;
 
 
-                for (File subcarpeta : subcarpetas) {
+               /* for (File subcarpeta : subcarpetas) {
                     System.out.println(subcarpeta.getName());
-                }
+                }*/
 
                 getPath();
             } else {
@@ -122,13 +122,13 @@ public class JSON_Utility {
 
         // Verificar si la carpeta de origen existe y es un directorio
         if (!oldPathLink.exists() || !oldPathLink.isDirectory()) {
-            System.out.println("La carpeta de origen no existe o no es un directorio vÃ¡lido");
+            System.out.println("La carpeta de origen no existe o no es un directorio válido");
             return;
         }
 
         // Verificar si la carpeta de destino existe y es un directorio
         if (!newPathLink.exists() || !newPathLink.isDirectory()) {
-            System.out.println("La carpeta de destino no existe o no es un directorio vÃ¡lido");
+            System.out.println("La carpeta de destino no existe o no es un directorio válido");
             return;
         }
 

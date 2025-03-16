@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane stylesheets="@../../../stylesheet/buttonStylesheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucr.proyecto.proyectogrupo1.controller.ControlInventarioController">
+   <center>
+      <AnchorPane prefHeight="652.0" prefWidth="933.0" style="-fx-background-color: beige;">
+         <children>
+            <VBox layoutY="14.0" prefHeight="200.0" prefWidth="100.0" spacing="50.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Control de Inventario:">
+                     <font>
+                        <Font name="Century Schoolbook" size="18.0" />
+                     </font>
+                  </Text>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#searchOnAction" prefHeight="35.0" prefWidth="189.0" text="Buscar producto">
+                           <font>
+                              <Font name="Century Schoolbook" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="txtBuscar" prefHeight="29.0" prefWidth="322.0" promptText="Nombre">
+                           <HBox.margin>
+                              <Insets top="6.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#updateStockOnAction" prefHeight="35.0" prefWidth="181.0" text="Actualizar Stock">
+                           <font>
+                              <Font name="Century Schoolbook" size="18.0" />
+                           </font>
+                        </Button>
+                        <HBox prefHeight="35.0" prefWidth="26.0" />
+                        <TextField fx:id="textFieldNewStock" prefHeight="35.0" prefWidth="321.0" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableView" prefHeight="400.0" prefWidth="833.0">
+                    <columns>
+                        <TableColumn fx:id="tableColumnSelected" prefWidth="74.0" text="Seleccionar" />
+                      <TableColumn fx:id="tableColumnID" editable="false" prefWidth="81.0" text="ID" visible="false" />
+                      <TableColumn fx:id="tableColumnName" prefWidth="500.0" text="NOMBRE" />
+                        <TableColumn fx:id="tableColumnPrice" prefWidth="114.0" text="PRECIO" />
+                        <TableColumn fx:id="tableColumnActualStock" prefWidth="108.0" text="STOCK ACTUAL" />
+                        <TableColumn fx:id="tableColumnMinimunStock" minWidth="8.0" prefWidth="132.0" text="STOCK MIN" />
+                        <TableColumn fx:id="tableColumnSupplier" editable="false" prefWidth="173.0" sortable="false" text="PROVEEDOR" visible="false" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="900.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#reportBtnOnAction" prefHeight="38.0" prefWidth="270.0" text="Generar reporte de stock">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#automaticUpdateOnAction" prefHeight="38.0" prefWidth="268.0" text="Actulizado Automatico">
+                           <font>
+                              <Font name="Century Schoolbook" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#confirmOnAction" prefHeight="40.0" prefWidth="238.0" text="Confirmar Cambios">
+                           <font>
+                              <Font name="Century Schoolbook" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

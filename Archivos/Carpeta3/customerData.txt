@@ -1,0 +1,1 @@
+[{"id":111111111,"name":"Cliente","phoneNumber":"12345678","email":"zjeancarlo42@gmail.com","address":"Cartago"},{"id":112234567,"name":"jean","phoneNumber":"70790629","email":"qzuniga05@gmail.com","address":"Cartago"},{"id":305330129,"name":"Paula Chaves Rivera","phoneNumber":"86920997","email":"pchavesr29@gmail.com","address":"Cartago"}]
