@@ -1,32 +1,62 @@
+# LaberintoLibros_2023
 # Proyecto-Grupo1
-Nombres de usuarios y contraseñas:
 
-Usuario Administrador: Usuario: Admin Password: Admin
+## Usuarios y Contraseñas
 
-Usuario Consulta: Usuario: Consulta Password: Consulta
+- **Usuario Administrador**:
+    - Usuario: `Admin`
+    - Contraseña: `Admin`
 
-Usuario Cliente: Usuario: Cliente Password: Cliente
+- **Usuario Consulta**:
+    - Usuario: `Consulta`
+    - Contraseña: `Consulta`
 
-Creación de las carpetas y rutas para los archivos serializables
+- **Usuario Cliente**:
+    - Usuario: `Cliente`
+    - Contraseña: `Cliente`
 
-1-En la raíz del proyecto al momento de descomprimirlo o clonarlo, se debe crear una carpeta llamada "Archivos", la cual debe contener  otras 3 carpetas, con los nombres de:
--Carpeta1
--Carpeta2
--Carpeta3
+## Creación de las carpetas y rutas para los archivos serializables
 
+Para garantizar el funcionamiento correcto del proyecto, es necesario crear ciertas carpetas y asegurarse de que los archivos correctos estén en el lugar adecuado. A continuación te explico cómo hacerlo:
 
-2-Dentro de cualquiera de las carpetas debe copiar pegar y los archivos txt manejados con JSON para su funcionamiento
-correcto, esto debido a que se están utilizando rutas absolutas en vez de relativas.
+### 1. Crear las carpetas
 
-3-Ingrese al Json_Utility y en método createPathFather(), en la primera línea cambie la ruta de los archivos por la ruta origen de
-la carpeta archivos.
+Al descomprimir o clonar el proyecto, deberás crear una carpeta llamada **"Archivos"** en la raíz del proyecto.  
+Dentro de la carpeta **"Archivos"**, debes crear otras tres carpetas con los siguientes nombres:
 
-4-En el mismo Json_Utility en el método getPath(), en el último if, de igual forma cambie por la ruta por la misma que anterior,
-pero añadiendo al final \\Carpeta2
+- **Carpeta1**
+- **Carpeta2**
+- **Carpeta3**
 
+### 2. Añadir archivos
 
-Uso de Librerias:
-Añadir las librerias que están en el WinRar.lib y la dependencia com.itextpdf.text
+Dentro de **cualquiera de las carpetas mencionadas** (Carpeta1, Carpeta2, Carpeta3), debes copiar y pegar los archivos **.txt** que se usan para manejar los datos con **JSON**.  
+Esto es esencial para que el sistema funcione correctamente, ya que el código está utilizando rutas absolutas en vez de relativas para acceder a estos archivos.
 
-Si da error el email ir al module info y comentar la línea donde esté // requires javax.mail.api;
-Para ingresar un nuevo cliente es necesario que el correo ingresado sea real y que esté bien escrito, incluya @  .com y un dominio real.
+### 3. Modificar rutas en el código
+
+- Ve al archivo **Json_Utility**.
+- En el método `createPathFather()`, cambia la ruta de los archivos en la primera línea para que apunte a la ubicación donde has colocado las carpetas **Archivos** y las subcarpetas (**Carpeta1**, **Carpeta2**, **Carpeta3**).
+- En el mismo archivo, dentro del método `getPath()`, localiza el último `if` y cambia la ruta por la misma que has puesto antes, pero añadiendo `\\Carpeta2` al final de la ruta.
+
+## Uso de Librerías
+
+Asegúrate de agregar las siguientes librerías a tu proyecto:
+
+- **Librerías dentro de WinRar.lib**.
+- **Dependencia `com.itextpdf.text`**.
+
+### Posibles Errores
+
+Si encuentras un error relacionado con el correo electrónico, sigue estos pasos:
+
+1. Dirígete al archivo **module-info.java**.
+2. Comenta la línea que dice `// requires javax.mail.api;`.
+
+### Ingreso de Nuevo Cliente
+
+Para registrar un nuevo cliente, es importante que el correo ingresado sea **real** y esté **bien escrito**. El correo debe cumplir con estos requisitos:
+
+- Debe incluir el símbolo **@**.
+- Debe terminar con **.com**.
+- El dominio debe ser real y válido.
